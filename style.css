@@ -1,0 +1,205 @@
+:root {
+    --header-height: 3.5rem;
+
+    --first-hue: 234;
+    --sat: 100%;
+    --lig: 66%;
+    --second-hue: 218;
+ 
+    --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+    --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
+    --title-color: hsl(var(--second-hue), 15%, 95%);
+    --text-color: hsl(var(--second-hue), 8%, 75%);
+    --text-color-light: hsl(var(--second-hue), 4%, 55%);
+    --body-color: hsl(var(--second-hue), 0%, 12%);
+    --container-color: hsl(var(--second-hue), 30%, 20%);
+
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 1.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-siez: .652rem;
+
+    --font-medium: 500;
+    --font-semibold: 600;
+}
+   
+   *{
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+
+   body {
+    background-color: var(--body-color);
+    transition: .4s;
+    font-family: Verdana, sans-serif; 
+    font-size: 100%;
+    margin: auto;
+    max-width: 1920px;
+    }
+
+    header{
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 30px;
+    }
+
+    .logo{
+        border-radius: 50px;
+        height: 50px;
+        width: 50px;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    img{
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .textIntro, .contactDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .iconContact{
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .photoContact{
+        
+        width:auto;
+        height: fit-content;
+    }
+
+    a{
+        padding: 7px;
+        margin: 5px;
+        justify-content: center;
+        align-items: center;
+        display: inline-block;
+    }
+
+    .nav{
+        background-color: var(--first-color);
+        color : var(--body-color);
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: var(--font-medium);
+        transition: .4s;
+    }
+
+    main{
+        margin: 50px;
+    }
+
+    section{
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 2vw;
+        margin: 5vw;
+        min-width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1vw 2vw 1vw 2vw;
+        box-shadow: 10px 10px grey;
+    background-color: white;
+    }
+
+    #intro, #about, #contact{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+
+    #contact{
+        width: 40%;
+    }
+
+   h1 {
+    font-weight: var(--font-semibold);
+    font-size: 200%; 
+    color: navy; 
+    text-align: center;
+    }
+   h2 {
+    font-weight: var(--font-semibold);
+    font-size: 150%; 
+    color: var(--text-color); 
+    padding-left: 15px;
+    }
+    h3 {
+    font-weight: var(--font-semibold);
+        font-size: 110%; 
+        color: var(--text-color);
+        padding-left: 15px;
+        }
+   p,ul,li,td {
+    color: navy; 
+    padding-left: 15px;
+    }
+
+    a {
+        transition: transform 600ms;
+    }
+
+   a:link {
+    color : var(--body-color);
+    text-decoration: none;
+    }
+   a:visited {
+    color : var(--body-color);
+    }
+   a:hover {
+    color: rgb(80, 84, 176);
+    text-decoration: none;
+    transform: scale(1.04);
+   }
+   a:active, a:focus {
+    color : var(--body-color);
+   }
+
+   footer{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px 6% 20px 20px;
+   }
+
+   .liensFooter{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+   }
+
+   .liensFooter a {
+    color: var(--text-color);
+   }
+   
+   .gitHub{
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    display: flex;
+   }
