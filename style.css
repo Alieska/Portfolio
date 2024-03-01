@@ -2,7 +2,7 @@
     --header-height: 3.5rem;
 
     --first-hue: 234;
-    --sat: 100%;
+    --sat: 50%;
     --lig: 66%;
     --second-hue: 218;
  
@@ -44,13 +44,15 @@
     max-width: 1920px;
     }
 
-    header{
+    header, footer {
         background-color: black;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         padding: 10px 30px;
     }
+
 
     .logo{
         border-radius: 50px;
@@ -123,13 +125,17 @@
         justify-content: center;
         padding: 1vw 2vw 1vw 2vw;
         box-shadow: 10px 10px grey;
-    background-color: white;
+        background-color: white;
     }
 
     #intro, #about, #contact{
         display: flex;
         flex-direction: row;
         justify-content:space-around;
+    }
+
+    #works{
+        align-items:center;
     }
 
     #contact{
@@ -154,9 +160,50 @@
         color: var(--text-color);
         padding-left: 15px;
         }
-   p,ul,li,td {
+   p {
     color: navy; 
     padding-left: 15px;
+    }
+
+    #about p {
+        font-size: 130%;
+    }
+
+    #about img {
+        height: 300px;
+    }
+
+    .realisations{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .work__card{
+        background-color: var(--container-color);
+        padding: 1rem;
+        border-radius: 1rem;
+        height:95%;
+        width: 400px;
+    }
+
+    .work__img{
+        border-radius: 1rem;
+        margin-bottom: .75rem;
+        width:100%;
+        height: 300px;
+    }
+
+    .work__title{
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-medium);
+        margin-bottom: .25rem;
+    }
+
+    .work__card p{
+        color: var(--first-color);
+    font-size: var(--small-font-size);
     }
 
     a {
@@ -179,17 +226,14 @@
     color : var(--body-color);
    }
 
-   footer{
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding: 20px 6% 20px 20px;
+   footer {
+    justify-content: flex-start;
    }
 
    .liensFooter{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 20px;
    }
 
@@ -200,6 +244,4 @@
    .gitHub{
     height: 50px;
     width: 50px;
-    margin: 15px;
-    display: flex;
    }
