@@ -5,31 +5,25 @@
     --lig: 66%;
     --second-hue: 218;
  
+    --backgroung-color:black;
+    --section-color:white;
+    --shadow-color:grey;
+    --text-color:navy;
     --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-    --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); 
-    --title-color: hsl(var(--second-hue), 15%, 95%);
-    --text-color: hsl(var(--second-hue), 8%, 75%);
-    --text-color-light: hsl(var(--second-hue), 4%, 55%);
+    --title-color: hsl(var(--second-hue), 8%, 75%);
     --body-color: hsl(var(--second-hue), 0%, 12%);
     --container-color: hsl(var(--second-hue), 30%, 20%);
+    --hover-color:rgb(80, 84, 176);
 
-    --body-font: 'Poppins', sans-serif;
-    --biggest-font-size: 1.75rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 110%;
-    --small-font-size: .813rem;
-
+    --font-normal: 300;
     --font-medium: 500;
     --font-semibold: 600;
 }
    
    *{
     font-family: "Averia Serif Libre", serif;
-    font-weight: 300;
+    font-weight: var(--font-normal);
     font-style: normal;
-    max-width: 1920px;
     box-sizing: border-box;
   }
 
@@ -44,11 +38,12 @@
     flex-direction: column;
     justify-content: center;
     max-width: 1920px;
+    min-width: 320px;
     box-sizing: border-box;
     }
 
     header, footer {
-        background-color: black;
+        background-color:var(--backgroung-color);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -118,8 +113,8 @@
         flex-direction: column;
         justify-content: center;
         padding: 1vw 2vw 1vw 2vw;
-        box-shadow: 10px 10px grey;
-        background-color: white;
+        box-shadow: 10px 10px var(--shadow-color);
+        background-color: var(--section-color);
     }
 
     #intro, #about, #contact{
@@ -137,7 +132,7 @@
     }
 
     h2,h3,h4,h5{
-        color: var(--text-color); 
+        color: var(--title-color); 
     }
 
    h1 {
@@ -172,7 +167,7 @@
     }
 
     h1,span, #cv li, .fa-solid, .fa-regular, .fa-brands, p {
-        color: navy;
+        color: var(--text-color);
     }
 
     .fa-circle{
@@ -299,7 +294,11 @@
 
     .work__card p{
         color: var(--first-color);
-        font-size: var(--small-font-size);
+        font-size: 120%;
+    }
+
+    .work__card li{
+        font-size: 80%;
     }
 
     #contact{
@@ -308,7 +307,7 @@
     }
 
     #contact a{
-        color: navy;
+        color: var(--text-color);
     }
 
     .iconContact{
@@ -334,7 +333,7 @@
     color : var(--body-color);
     }
    a:hover {
-    color: rgb(80, 84, 176);
+    color: var(--hover-color);
     text-decoration: none;
     transform: scale(1.04);
    }
@@ -354,7 +353,7 @@
    }
 
    .liensFooter a {
-    color: var(--text-color);
+    color: var(--title-color);
    }
    
    .gitHub{
@@ -444,10 +443,6 @@
     
         h2{
             font-size: 120%;
-        }
-    
-        h3{
-            font-size: 100%;
         }
     
         h4{
